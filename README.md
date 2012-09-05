@@ -28,9 +28,7 @@ As the new user 'moo', get the LambdaMoo server and build in /home/moo:
 
 As user root get and install the moo start/stop script:
 
-### TODO: add start/stop script
-
-    wget 
+    wget https://raw.github.com/heow/raspberrypi-lambdamoo-recipe/master/moo
     mv moo /etc/init.d/
     chmod +x /etc/init.d/moo
     update-rc.d -f moo defaults
@@ -41,9 +39,13 @@ Edit the install script, there are just 3 variables you may want to fiddle with:
     MOOPORT=7777
     MOOROOT=/home/moo/MOO-1.8.1
 
-As user root, add this line to the to /etc/rc.local, it will register your RaspberryPi's IP address as yib.mooo.in and allow it to be found by name, otherwise you'll have to manually find it on the network:
+As yourself, goto [FreeDNS](http://freedns.afraid.org) and sign up for an account.  mooo.in is an open and awesome domain.  Once you setup a subdomain, say yib.mooo.in save the key, it'll look like this:
 
-    wget --background -qO- /dev/null -q --read-timeout=0.0 --waitretry=5 --tries=400 http://freedns.afraid.org/dynamic/update.php?U053WEFVTVRTTUlBQU5pSEtEdzo4MjAwNjYy\&address=`hostname -I` 2>&1 > /tmp/register.txt
+    U053WEFVTOHUDUlBQU5pSEtEdzo4MjAwNjYy
+
+As user root, add this line to the to /etc/rc.local, it will register your RaspberryPi's IP address with FreeDNS and allow it to be found by name, otherwise you'll have to manually find it on the network.  Substitude your key in the obvious place:
+
+    wget --background -qO- /dev/null -q --read-timeout=0.0 --waitretry=5 --tries=400 http://freedns.afraid.org/dynamic/update.php?YOUR_FREEDNS_KEY\&address=`hostname -I` 2>&1 > /tmp/register.txt
 
 As user moo:  download LambdaCore or install your own.  It should share the same name as $MOONAME.  For instance, if $MOONAME=yibmoo, the core file needs to be /home/moo/yibmoo.db
 
