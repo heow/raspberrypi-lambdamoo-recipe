@@ -14,6 +14,7 @@ Download the Raspberian image:
 3. run 'sudo raspi-config' and select 'expand_rootfs'
 
 As user root, install some required packages and create a new user named 'moo':
+
     apt-get install bison telnet ncompress
     adduser moo
 
@@ -26,7 +27,8 @@ As the new user 'moo', get the LambdaMoo server and build in /home/moo:
     make
 
 As user root get and install the moo start/stop script:
-TODO: add start/stop script
+
+### TODO: add start/stop script
 
     wget 
     mv moo /etc/init.d/
@@ -34,6 +36,7 @@ TODO: add start/stop script
     update-rc.d -f moo defaults
 
 Edit the install script, there are just 3 variables you may want to fiddle with:
+
     MOONAME=yibmoo
     MOOPORT=7777
     MOOROOT=/home/moo/MOO-1.8.1
