@@ -14,6 +14,8 @@
 #    chmod +x /etc/init.d/moo
 #    update-rc.d -f moo defaults
 
+# thanks to Puff
+
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 export MOONAME=yibmoo
