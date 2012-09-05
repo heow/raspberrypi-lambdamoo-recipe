@@ -8,9 +8,9 @@ Download the Raspberian image:
     wget http://downloads.raspberrypi.org/images/raspbian/2012-08-16-wheezy-raspbian/2012-08-16-wheezy-raspbian.zip 
 
 'dd' it to the SD card and resize partition the root to completely fill media, otherwise you're stuck with only 2GB of storage on a much larger SD card.  Resizing can be done using a resize tool (in Linux, gparted) or when you first boot the pi...
-# figure out it's IP
-# ssh in (usr/pass is pi/raspberry)
-# run 'sudo raspi-config' and select 'expand_rootfs'
+1. figure out it's IP
+2. ssh in (usr/pass is pi/raspberry)
+3. run 'sudo raspi-config' and select 'expand_rootfs'
 
 As user root, install some required packages and create a new user named 'moo':
     apt-get install bison telnet ncompress
