@@ -47,7 +47,7 @@ As user root, add the following line to the to _/etc/rc.local_  It registers you
 
     wget --background -qO- /dev/null -q --read-timeout=0.0 --waitretry=5 --tries=400 http://freedns.afraid.org/dynamic/update.php?INSERTYOURFREEDNSKEY\&address=`hostname -I` 2>&1 > /tmp/register.txt
 
-As user moo:  download LambdaCore or install your own.  It should share the same name as $MOONAME.  For instance, if _$MOONAME=yibmoo_, the core file needs to be _/home/moo/yibmoo.db_
+As user moo:  download LambdaCore or install your own.  It should share the same name as _$MOONAME_.  For instance, if _$MOONAME=yibmoo_, the core file needs to be _/home/moo/yibmoo.db_
 
     wget http://ftp.lambda.moo.mud.org/pub/MOO/LambdaCore-latest.db
     mv LambdaCore-latest.db yibmoo.db
