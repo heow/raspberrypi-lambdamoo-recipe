@@ -52,4 +52,4 @@ As user moo:  download LambdaCore or install your own.  It should share the same
     wget http://ftp.lambda.moo.mud.org/pub/MOO/LambdaCore-latest.db
     mv LambdaCore-latest.db yibmoo.db
 
-Happy Mooing!
+May a million moos flourish!
